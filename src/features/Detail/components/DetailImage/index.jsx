@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { MOBILE_BREAKPOINT } from "constants/breakpoints";
+import { MOBILE_BREAKPOINT } from "../../../../constants/breakpoints";
 
 // react content loader
 import ContentLoader from "react-content-loader";
 
 // react img magnifiers
-import { SideBySideMagnifier } from "react-image-magnifiers";
-
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
 import "./styles.scss";
 
 function DetailImage(props) {
@@ -45,12 +45,9 @@ function DetailImage(props) {
     <div className="detail-img">
       {isAtDesktop ? (
         img ? (
-          <SideBySideMagnifier
+          <InnerImageZoom
+            src={img}
             className={isLast ? "detail-img__main last" : "detail-img__main"}
-            imageSrc={img}
-            imageAlt="Foods"
-            alwaysInPlace={true}
-            transitionSpeedInPlace={0.3}
           />
         ) : (
           contentLoader()

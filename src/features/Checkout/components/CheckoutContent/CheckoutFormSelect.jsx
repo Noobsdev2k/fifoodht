@@ -1,5 +1,7 @@
-import countriesList from "utils/countriesList";
-import PRIMARY_RED_COLOR, { PRIMARY_WHITE_COLOR } from "constants/colors";
+import countriesList from "../../../../utils/countriesList";
+import PRIMARY_RED_COLOR, {
+  PRIMARY_WHITE_COLOR,
+} from "../../../../constants/colors";
 
 // styled component
 import styled from "styled-components";

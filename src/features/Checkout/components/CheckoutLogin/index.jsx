@@ -1,13 +1,13 @@
 // material ui core
-import { Container } from "@material-ui/core";
 
-import PrimaryButton from "components/PrimaryButton";
-import LoadedImage from "components/LoadedImage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import CheckoutLoginSvg from "assets/svgs/Checkout/login.svg";
+import CheckoutLoginSvg from "../../../../assets/svgs/Checkout/login.svg";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
+import { Container } from "@mui/material";
 
 function CheckoutLogin() {
   return (

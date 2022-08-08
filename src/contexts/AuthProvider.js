@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import { auth } from "configs/firebaseConfig";
-import useFirestoreProducts from "hooks/useFirestoreProducts";
+import { auth } from "../configs/firebaseConfig";
+import useFirestoreProducts from "../hooks/useFirestoreProducts";
 
 const AuthContext = React.createContext();
 
@@ -10,7 +10,7 @@ function AuthProvider({ children }) {
   const [hasHeader, setHasHeader] = useState(true);
   const [user, setUser] = useState(null);
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const { addToFirestore } = useFirestoreProducts();
@@ -26,7 +26,7 @@ function AuthProvider({ children }) {
 
         // if user tries to login then redirect to home
         if (pathname.includes("login")) {
-          history.push("/home");
+          navigate("/home");
         }
       }
     });

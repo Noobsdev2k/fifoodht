@@ -3,16 +3,16 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
-import PrimaryButton from "components/PrimaryButton";
-import LoadedImage from "components/LoadedImage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import BigDeliverySvg from "assets/svgs/Home/big-delivery.svg";
-import SmallDeliverySvg from "assets/svgs/Home/small-delivery.svg";
+import BigDeliverySvg from "../../../../assets/svgs/Home/big-delivery.svg";
+import SmallDeliverySvg from "../../../../assets/svgs/Home/small-delivery.svg";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
+import { Container } from "@mui/material";
 
 function HomeDelivery() {
   let containerRef = useRef(null);

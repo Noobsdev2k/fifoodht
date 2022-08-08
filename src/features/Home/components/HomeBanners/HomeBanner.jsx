@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 import gsap from "gsap";
 
 // material ui icons
-import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
-import PrimaryButton from "components/PrimaryButton";
-import LoadedImage from "components/LoadedImage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import LoadedImage from "../../../../components/LoadedImage";
 
 import "./HomeBanner.scss";
+import { Container } from "@mui/material";
 
 function HomeBanner(props) {
   const { title, description, strong, background } = props;

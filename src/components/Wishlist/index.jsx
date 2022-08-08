@@ -1,24 +1,24 @@
 import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { db } from "configs/firebaseConfig";
+import { AuthContext } from "../../contexts/AuthProvider";
+import { db } from "../../configs/firebaseConfig";
 import { addToWishlist, setIsShowWishlist } from "./wishlistSlice";
-import useFirestoreProducts from "hooks/useFirestoreProducts";
+import useFirestoreProducts from "../../hooks/useFirestoreProducts";
 
 // material ui core
-import { Button } from "@material-ui/core";
 
 // material ui icons
-import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
-import ExitToAppOutlinedIcon from "@material-ui/icons/ExitToAppOutlined";
-import RadioOutlinedIcon from "@material-ui/icons/RadioOutlined";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import RadioOutlinedIcon from "@mui/icons-material/RadioOutlined";
 
-import EmptyCart from "components/EmptyCart";
+import EmptyCart from "../EmptyCart";
 
-import EmptyCartImg from "assets/svgs/Common/empty-cart.svg";
+import EmptyCartImg from "../../assets/svgs/Common/empty-cart.svg";
 
 import "./styles.scss";
+import { Button } from "@mui/material";
 
 function Wishlist() {
   const dispatch = useDispatch();

@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 import {
   filterShopByOrder,
   setShopProductsView,
-} from "features/Shop/shopSlice";
-import { ApiContext } from "contexts/ApiProvider";
-import { PrevFilterContext } from "contexts/PrevFilterProvider";
+} from "../../../../features/Shop/shopSlice";
+import { ApiContext } from "../../../../contexts/ApiProvider";
+import { PrevFilterContext } from "../../../../contexts/PrevFilterProvider";
 
 // material ui icons
-import SearchIcon from "@material-ui/icons/Search";
-import ViewList from "@material-ui/icons/ViewList";
-import ViewModuleIcon from "@material-ui/icons/ViewModule";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import SearchIcon from "@mui/icons-material/Search";
+import ViewList from "@mui/icons-material/ViewList";
+import ViewModuleIcon from "@mui/icons-material/ViewModule";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import "./ShopHandle.scss";
 

@@ -1,29 +1,29 @@
 import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+
 import PropTypes from "prop-types";
 
-import useFirestoreProducts from "hooks/useFirestoreProducts";
-import { AuthContext } from "contexts/AuthProvider";
-import { setIsAtCheckout } from "components/Header/headerSlice";
+import useFirestoreProducts from "../../../../hooks/useFirestoreProducts";
+import { AuthContext } from "../../../../contexts/AuthProvider";
+import { setIsAtCheckout } from "../../../../components/Header/headerSlice";
 
 // yup
 import * as yup from "yup";
-
+import { yupResolver } from "@hookform/resolvers/yup";
 // react hook form
 import { useForm, Controller } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 
 // material ui icons
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
-import PrimaryButton from "components/PrimaryButton";
+import PrimaryButton from "../../../../components/PrimaryButton";
 import CheckoutFormField from "./CheckoutFormField";
 import CheckoutFormSelect from "./CheckoutFormSelect";
 import CheckoutLoading from "../CheckoutLoading";
-import ToastMessage from "components/ToastMessage";
+import ToastMessage from "../../../../components/ToastMessage";
 
 import "./CheckoutForm.scss";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   firstName: yup
@@ -50,7 +50,7 @@ function CheckoutForm(props) {
 
   const [isShowLoading, setIsShowLoading] = useState(false);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart);
@@ -97,7 +97,7 @@ function CheckoutForm(props) {
     const action = setIsAtCheckout(false);
 
     dispatch(action);
-    history.push("/shop/best-foods");
+    navigate("/shop/best-foods");
   };
 
   // if empty cart then reset progress to false

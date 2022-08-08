@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import useFirestoreComments from "hooks/useFirestoreComments";
+import useFirestoreComments from "../../../../hooks/useFirestoreComments";
 import { useParams } from "react-router-dom";
 
-import { detailTableData } from "utils/staticData";
+import { detailTableData } from "../../../../utils/staticData";
 
 import DetailTabComment from "./DetailTabComment";
 

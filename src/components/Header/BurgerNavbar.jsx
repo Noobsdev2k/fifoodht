@@ -2,17 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 
-import { setIsShowWishlist } from "components/Wishlist/wishlistSlice";
+import { setIsShowWishlist } from "../Wishlist/wishlistSlice";
 
 // material ui core
-import { Avatar } from "@material-ui/core";
-
+import Avatar from "@mui/material/Avatar";
 // material ui icons
-import HomeIcon from "@material-ui/icons/Home";
-import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
-import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
-import StoreMallDirectoryIcon from "@material-ui/icons/StoreMallDirectory";
-import LoyaltyIcon from "@material-ui/icons/Loyalty";
+import HomeIcon from "@mui/icons-material/Home";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
+import LoyaltyIcon from "@mui/icons-material/Loyalty";
 
 import "./BurgerNavbar.scss";
 

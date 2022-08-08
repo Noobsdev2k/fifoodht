@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
-import { homeCategoryData } from "utils/staticData";
+import { homeCategoryData } from "../../../../utils/staticData";
 
 // material ui
-import { Button, Container } from "@material-ui/core";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 // gsap
 import gsap from "gsap";
@@ -14,20 +14,21 @@ import SwiperCore, { Autoplay, Navigation } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // swiper scss
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
+import "swiper/scss";
+import "swiper/scss/navigation";
 
-import BackgroundIcon from "components/BackgroundIcon";
-import LoadedImage from "components/LoadedImage";
+import BackgroundIcon from "../../../../components/BackgroundIcon";
+import LoadedImage from "../../../../components/LoadedImage";
 
 import {
   BackgroundIconOne,
   BackgroundIconTwo,
   BackgroundIconThree,
-} from "utils/backgroundIcons";
+} from "../../../../utils/backgroundIcons";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
+import { Button, Container } from "@mui/material";
 
 // swiper modules
 SwiperCore.use([Autoplay, Navigation]);

@@ -1,20 +1,20 @@
 import React, { useRef } from "react";
 
-import { PRIMARY_YELLOW_COLOR } from "constants/colors";
-import useFirestoreComments from "hooks/useFirestoreComments";
+import { PRIMARY_YELLOW_COLOR } from "../../../../constants/colors";
+import useFirestoreComments from "../../../../hooks/useFirestoreComments";
 
 // react time ago
 import TimeAgo from "react-timeago";
 
 // material ui core
-import { Avatar } from "@material-ui/core";
 
 // material ui icons
-import StarIcon from "@material-ui/icons/Star";
+import StarIcon from "@mui/icons-material/Star";
 
 import DetailTabUser from "./DetailTabUser";
 
 import "./DetailTabComment.scss";
+import { Avatar } from "@mui/material";
 
 function DetailTabComment() {
   const ref = useRef(null);

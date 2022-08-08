@@ -1,30 +1,30 @@
 import { useEffect, useContext } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
-import { ApiContext } from "contexts/ApiProvider";
-import { AuthContext } from "contexts/AuthProvider";
+import { ApiContext } from "../../contexts/ApiProvider";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
-import Banner from "components/Banner";
+import Banner from "../../components/Banner";
 import ShopFilters from "./components/ShopFilters";
 import ShopContent from "./components/ShopContent";
 
 import "./styles.scss";
+import { Container } from "@mui/material";
 
 function Shop() {
   const { setHasHeader } = useContext(AuthContext);
 
   const { name } = useParams();
-  const history = useHistory();
+
+  const location = useLocation();
 
   const { getProducts } = useContext(ApiContext);
 
   // when browser loaded get url to re-render
   window.addEventListener("load", () => {
-    const params = history.location.search;
-
+    const params = location.search;
     if (params) {
       const paramsObj = JSON.parse(
         '{"' +
@@ -33,7 +33,6 @@ function Shop() {
           ) +
           '"}'
       );
-
       getProducts(name, paramsObj);
     } else {
       getProducts(name);

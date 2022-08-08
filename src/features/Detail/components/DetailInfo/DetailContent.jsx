@@ -1,32 +1,32 @@
 import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 
-import useFirestoreComments from "hooks/useFirestoreComments";
-import { AuthContext } from "contexts/AuthProvider";
+import useFirestoreComments from "../../../../hooks/useFirestoreComments";
+import { AuthContext } from "../../../../contexts/AuthProvider";
 
 // react content loader
 import ContentLoader from "react-content-loader";
 
 // material ui core
-import { Button } from "@material-ui/core";
 
 // material ui icons
-import StarIcon from "@material-ui/icons/Star";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import LocalShippingOutlinedIcon from "@material-ui/icons/LocalShippingOutlined";
-import EventAvailableOutlinedIcon from "@material-ui/icons/EventAvailableOutlined";
-import LocalOfferOutlinedIcon from "@material-ui/icons/LocalOfferOutlined";
-import AddShoppingCartOutlinedIcon from "@material-ui/icons/AddShoppingCartOutlined";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+import StarIcon from "@mui/icons-material/Star";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import EventAvailableOutlinedIcon from "@mui/icons-material/EventAvailableOutlined";
+import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
-import PrimaryButton from "components/PrimaryButton";
-import Checkbox from "components/Checkbox";
-import Dialog from "components/Dialog";
-import ToastMessage from "components/ToastMessage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import Checkbox from "../../../../components/Checkbox";
+import Dialog from "../../../../components/Dialog";
+import ToastMessage from "../../../../components/ToastMessage";
 
 import "./DetailContent.scss";
+import { Button } from "@mui/material";
 
 function DetailContent(props) {
   const [isShowDialog, setIsShowDialog] = useState(false);
@@ -188,7 +188,6 @@ DetailContent.propTypes = {
   price: PropTypes.number.isRequired,
   qnt: PropTypes.number.isRequired,
   handleAddToFirestore: PropTypes.func.isRequired,
-
   paramsName: PropTypes.string,
   handleFuncs: PropTypes.object,
   selectedRadio: PropTypes.string,

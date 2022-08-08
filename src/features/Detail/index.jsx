@@ -1,20 +1,19 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { AuthContext } from "contexts/AuthProvider";
-import shopApi from "api/shopApi";
+import { AuthContext } from "../../contexts/AuthProvider";
+import shopApi from "../../api/shopApi";
 
 // material ui core
-import { Container } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
 
-import Banner from "components/Banner";
+import Banner from "../../components/Banner";
 import DetailTab from "./components/DetailTab";
 import DetailProducts from "./components/DetailProducts";
 import DetailImage from "./components/DetailImage";
 import DetailInfo from "./components/DetailInfo";
 
 import "./styles.scss";
+import { Container, Grid } from "@mui/material";
 
 function Detail() {
   const { name, id } = useParams();

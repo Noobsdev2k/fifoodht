@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { setIsAtCheckout } from "components/Header/headerSlice";
+import { AuthContext } from "../../contexts/AuthProvider";
+import { setIsAtCheckout } from "../../components/Header/headerSlice";
 
 import CheckoutBanner from "./components/CheckoutBanner";
 import CheckoutContent from "./components/CheckoutContent";
@@ -20,7 +20,7 @@ function Checkout() {
     const action = setIsAtCheckout(true);
 
     dispatch(action);
-  }, []);
+  }, [user, dispatch]);
 
   return (
     <div className="checkout">

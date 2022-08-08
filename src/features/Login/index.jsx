@@ -1,26 +1,29 @@
 import { useContext, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import { googleProvider, auth, facebookProvider } from "configs/firebaseConfig";
-import { AuthContext } from "contexts/AuthProvider";
+import {
+  googleProvider,
+  auth,
+  facebookProvider,
+} from "../../configs/firebaseConfig";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 // material ui core
-import { Button, Container } from "@material-ui/core";
-
+import { Button, Container } from "@mui/material";
 // material ui icons
-import FacebookIcon from "@material-ui/icons/Facebook";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 import LoginForm from "./components/LoginForm";
-import LoadedImage from "components/LoadedImage";
-import ToastMessage from "components/ToastMessage";
+import LoadedImage from "../../components/LoadedImage";
+import ToastMessage from "../../components/ToastMessage";
 
-import LoginThumbSvg from "assets/svgs/Login/thumb.svg";
-import GoogleSvg from "assets/svgs/Login/google.svg";
+import LoginThumbSvg from "../../assets/svgs/Login/thumb.svg";
+import GoogleSvg from "../../assets/svgs/Login/google.svg";
 
 import "./styles.scss";
 
 function Login() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { setHasHeader } = useContext(AuthContext);
 
@@ -28,7 +31,7 @@ function Login() {
     auth
       .signInWithPopup(googleProvider)
       .then(() => {
-        history.goBack();
+        navigate(-1);
         setHasHeader(true);
       })
       .catch((error) => {
@@ -40,7 +43,7 @@ function Login() {
     auth
       .signInWithPopup(facebookProvider)
       .then(() => {
-        history.goBack();
+        navigate(-1);
         setHasHeader(true);
       })
       .catch((error) => {

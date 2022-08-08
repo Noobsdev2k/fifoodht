@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
 // material ui icons
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 import "./CheckoutProgress.scss";
 

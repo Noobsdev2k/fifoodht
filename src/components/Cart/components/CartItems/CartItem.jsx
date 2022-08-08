@@ -2,16 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // material ui core
-import { Button } from "@material-ui/core";
 
 // material ui icons
-import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../../../LoadedImage";
 
 import "./CartItem.scss";
+import { Button } from "@mui/material";
 
 function CartItem(props) {
   const { product, handleAddToFirestore, handleRemoveFromFirestore } = props;

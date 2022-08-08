@@ -1,14 +1,14 @@
 // material ui
-import { Container } from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
-import PhoneInTalkOutlinedIcon from "@material-ui/icons/PhoneInTalkOutlined";
-import SpeakerNotesOutlinedIcon from "@material-ui/icons/SpeakerNotesOutlined";
-import BusinessOutlinedIcon from "@material-ui/icons/BusinessOutlined";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import LinearScaleIcon from "@material-ui/icons/LinearScale";
+
+import { Container, Grid } from "@mui/material";
+import LinearScaleIcon from "@mui/icons-material/LinearScale";
+import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
+import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import "./styles.scss";
 
@@ -57,14 +57,14 @@ function Footer() {
 
               <div className="footer__contact">
                 <SpeakerNotesOutlinedIcon className="footer__contact-icon" />
-                <span className="footer__contact-txt">thanhhunq2k@gmail.com</span>
+                <span className="footer__contact-txt">
+                  thanhhunq2k@gmail.com
+                </span>
               </div>
 
               <div className="footer__contact">
                 <BusinessOutlinedIcon className="footer__contact-icon" />
-                <span className="footer__contact-txt">
-                  Quy Nhon, Binh Dinh
-                </span>
+                <span className="footer__contact-txt">Quy Nhon, Binh Dinh</span>
               </div>
               <div className="footer__contact footer__contact--icons">
                 <FacebookIcon style={{ fill: "#2D88FF" }} />
@@ -85,7 +85,6 @@ function Footer() {
                 scrolling="auto"
                 title="map"
               ></iframe>
-              
             </div>
           </Grid>
         </Grid>

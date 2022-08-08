@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { homeBannersData } from "utils/staticData";
+import { homeBannersData } from "../../../../utils/staticData";
 
 import HomeBanner from "./HomeBanner";
 
@@ -20,7 +20,7 @@ function HomeBanners() {
     }, 6000);
 
     return clearTimeout(timeWaiter);
-  });
+  }, [slideNum]);
 
   const moveDot = (idx) => {
     setSlideNum(idx);

@@ -1,7 +1,7 @@
 // material ui
-import { Checkbox } from "@material-ui/core";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 // react hook form
 import { useForm } from "react-hook-form";
@@ -11,10 +11,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import LoginFormField from "./LoginFormField";
-import PrimaryButton from "components/PrimaryButton";
-import ToastMessage from "components/ToastMessage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import ToastMessage from "../../../../components/ToastMessage";
 
 import "./styles.scss";
+import { Checkbox } from "@mui/material";
 
 const schema = yup.object().shape({
   email: yup

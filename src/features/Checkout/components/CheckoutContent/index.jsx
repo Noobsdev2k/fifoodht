@@ -6,14 +6,14 @@ import CheckoutUserInfo from "./CheckoutUserInfo";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutAside from "./CheckoutAside";
 import CheckoutSuccess from "../CheckoutSuccess";
-import BackgroundIcon from "components/BackgroundIcon";
+import BackgroundIcon from "../../../../components/BackgroundIcon";
 
 import {
   BackgroundIconBlurOne,
   BackgroundIconBlurTwo,
   BackgroundIconBlurThree,
   BackgroundIconBlurFour,
-} from "utils/backgroundIcons";
+} from "../../../../utils/backgroundIcons";
 
 import "./styles.scss";
 

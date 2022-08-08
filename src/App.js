@@ -1,10 +1,10 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import Theme from "utils/customMaterialUi";
+import Theme from "./utils/customMaterialUi";
 import ApiProvider from "./contexts/ApiProvider";
 import AuthProvider from "./contexts/AuthProvider";
 import PrevFilterProvider from "./contexts/PrevFilterProvider";
-import Routes from "routes/Routes";
+import Routes from "./routes/Routes";
 
 // gsap
 import gsap from "gsap";
@@ -17,13 +17,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 // material ui core
-import { ThemeProvider } from "@material-ui/core/styles";
 
-import Header from "components/Header";
-import Footer from "components/Footer";
-import ScrollButton from "components/ScrollButton";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollButton from "./components/ScrollButton";
 
 import "./App.scss";
+import { ThemeProvider } from "@mui/material";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Router>
+      <BrowserRouter>
         <AuthProvider>
           <PrevFilterProvider>
             <ApiProvider>
@@ -43,7 +43,7 @@ function App() {
             </ApiProvider>
           </PrevFilterProvider>
         </AuthProvider>
-      </Router>
+      </BrowserRouter>
       <ScrollButton />
       <Footer />
       <ToastContainer />

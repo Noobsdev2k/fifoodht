@@ -1,15 +1,15 @@
-import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // material ui core
-import { Button } from "@material-ui/core";
 
 import "./styles.scss";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Dialog(props) {
   const { isShow, setIsShow } = props;
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const hideDialog = () => {
     setIsShow(false);
@@ -17,7 +17,7 @@ function Dialog(props) {
 
   const moveToLogin = () => {
     setIsShow(false);
-    history.push("/login");
+    navigate("/login");
   };
 
   return (

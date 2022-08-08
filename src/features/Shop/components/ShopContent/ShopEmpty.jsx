@@ -1,6 +1,6 @@
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import EmptyShopImg from "assets/svgs/Shop/empty-shop.svg";
+import EmptyShopImg from "../../../../assets/svgs/Shop/empty-shop.svg";
 
 import "./ShopEmpty.scss";
 

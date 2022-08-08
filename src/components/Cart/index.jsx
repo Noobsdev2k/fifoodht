@@ -1,16 +1,16 @@
 import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { db } from "configs/firebaseConfig";
+import { AuthContext } from "../../contexts/AuthProvider";
+import { db } from "../../configs/firebaseConfig";
 import { addToCart } from "./cartSlice";
-import { setIsShowCart } from "components/Header/headerSlice";
+import { setIsShowCart } from "../Header/headerSlice";
 
 import CartItems from "./components/CartItems";
 import CartHandle from "./components/CartHandle";
-import EmptyCart from "components/EmptyCart";
+import EmptyCart from "../EmptyCart";
 
-import EmptyCartImg from "assets/svgs/Common/empty-cart.svg";
+import EmptyCartImg from "../../assets/svgs/Common/empty-cart.svg";
 
 import "./styles.scss";
 

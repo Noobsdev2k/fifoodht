@@ -1,25 +1,25 @@
 import { useEffect, useRef } from "react";
 
-import { homeProductsData } from "utils/staticData";
+import { homeProductsData } from "../../../../utils/staticData";
 
 // gsap
 import gsap from "gsap";
 
 // material ui
-import { Container } from "@material-ui/core";
 
 // swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 
 // swiper scss
-import "swiper/components/pagination/pagination.scss";
+import "swiper/scss/pagination";
 
 import HomeProduct from "./HomeProduct";
-import Dialog from "components/Dialog";
+import Dialog from "../../../../components/Dialog";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
+import { Container } from "@mui/material";
 
 // swiper modules
 SwiperCore.use([Autoplay, Pagination]);

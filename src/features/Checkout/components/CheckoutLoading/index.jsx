@@ -1,10 +1,10 @@
-import PRIMARY_RED_COLOR from "constants/colors";
+import PRIMARY_RED_COLOR from "../../../../constants/colors";
 
 // material ui core
-import { CircularProgress } from "@material-ui/core";
 
 // styled components
 import styled from "styled-components";
+import { CircularProgress } from "@mui/material";
 
 const CheckoutLoadingContainer = styled.div`
   position: fixed;

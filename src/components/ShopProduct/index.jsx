@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import { AuthContext } from "contexts/AuthProvider";
-import useFirestoreProducts from "hooks/useFirestoreProducts";
+import { AuthContext } from "../../contexts/AuthProvider";
+import useFirestoreProducts from "../../hooks/useFirestoreProducts";
 
 // lazy load img js
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,12 +12,12 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 // material ui icons
-import StarIcon from "@material-ui/icons/Star";
-import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import RoomIcon from "@material-ui/icons/Room";
+import StarIcon from "@mui/icons-material/Star";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import RoomIcon from "@mui/icons-material/Room";
 
-import ToastMessage from "components/ToastMessage";
+import ToastMessage from "../ToastMessage";
 
 import "./styles.scss";
 
@@ -26,7 +26,7 @@ function ShopProduct(props) {
     props;
 
   const params = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { user } = useContext(AuthContext);
   const { addToFirestore } = useFirestoreProducts();
@@ -48,7 +48,7 @@ function ShopProduct(props) {
   };
 
   const handleToDetail = (id) => {
-    history.push(`/shop/${params.name}/${id}`);
+    navigate(`/shop/${params.name}/${id}`);
     moveToTop && moveToTop();
   };
 

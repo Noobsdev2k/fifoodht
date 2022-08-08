@@ -1,33 +1,33 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { auth } from "configs/firebaseConfig";
+import { AuthContext } from "../../contexts/AuthProvider";
+import { auth } from "../../configs/firebaseConfig";
 import { setIsAtCheckout, setIsShowCart } from "./headerSlice";
-import { setIsShowWishlist } from "components/Wishlist/wishlistSlice";
+import { setIsShowWishlist } from "../Wishlist/wishlistSlice";
 
 // material ui core
-import { Container, Avatar } from "@material-ui/core";
 
 // material ui icons
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import HomeIcon from "@material-ui/icons/Home";
-import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
-import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
-import StoreMallDirectoryIcon from "@material-ui/icons/StoreMallDirectory";
-import EmojiFoodBeverageIcon from "@material-ui/icons/EmojiFoodBeverage";
-import LoyaltyOutlinedIcon from "@material-ui/icons/LoyaltyOutlined";
-import PermContactCalendarIcon from "@material-ui/icons/PermContactCalendar";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import HomeIcon from "@mui/icons-material/Home";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
+import EmojiFoodBeverageIcon from "@mui/icons-material/EmojiFoodBeverage";
+import LoyaltyOutlinedIcon from "@mui/icons-material/LoyaltyOutlined";
+import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
-import Dialog from "components/Dialog";
+import Dialog from "../Dialog";
 import BurgerNavbar from "./BurgerNavbar";
-import Cart from "components/Cart";
-import Wishlist from "components/Wishlist";
+import Cart from "../Cart";
+import Wishlist from "../Wishlist";
 
-import Logo from "assets/svgs/Common/logo.svg";
+import Logo from "../../assets/svgs/Common/logo.svg";
 import "./styles.scss";
+import { Avatar, Container } from "@mui/material";
 
 function Header() {
   const [isStickyTop, setIsStickyTop] = useState(false);
@@ -35,7 +35,7 @@ function Header() {
   const [isShowDialog, setIsShowDialog] = useState(false);
   const [totalQnt, setTotalQnt] = useState(0);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -50,13 +50,13 @@ function Header() {
   const handleBackToHome = () => {
     const action = setIsAtCheckout(false);
 
-    history.push("/home");
+    navigate("/home");
     setIsAtCheckout(false);
     dispatch(action);
   };
 
   const handleLogIn = () => {
-    history.push("/login");
+    navigate("/login");
   };
 
   const handleLogOut = () => {

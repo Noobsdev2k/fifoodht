@@ -1,18 +1,17 @@
 import { useEffect, useRef } from "react";
 
-import { homeWorkData } from "utils/staticData";
+import { homeWorkData } from "../../../../utils/staticData";
 
 // gsap
 import gsap from "gsap";
 
 // material ui core
-import { Container } from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
+import { Container, Grid } from "@mui/material";
 
 function HomeWork() {
   let containerRef = useRef(null);

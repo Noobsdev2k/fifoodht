@@ -1,7 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/analytics";
-import "firebase/auth";
-import "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB4tLAQAnuak7UYBq0IDnpt9ZobPrWAuyg",
@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "food-f-base-a9142.appspot.com",
   messagingSenderId: "601998816204",
   appId: "1:601998816204:web:fbbedf9e7f94d6837b2369",
-  measurementId: "G-G7CFBT3YGR"
+  measurementId: "G-G7CFBT3YGR",
 };
 
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();

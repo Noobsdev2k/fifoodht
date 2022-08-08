@@ -1,7 +1,7 @@
 // material ui icons
-import LinearScaleIcon from "@material-ui/icons/LinearScale";
+import LinearScaleIcon from "@mui/icons-material/LinearScale";
 
-import CommonBanner from "assets/images/Common/banner.jpg";
+import CommonBanner from "../../../../assets/images/Common/banner.jpg";
 
 import "./styles.scss";
 

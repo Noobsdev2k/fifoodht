@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import usePrice from "hooks/usePrice";
+import usePrice from "../../../../hooks/usePrice";
 
 // material ui icons
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import StoreMallDirectoryIcon from "@material-ui/icons/StoreMallDirectory";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 
-import PrimaryButton from "components/PrimaryButton";
+import PrimaryButton from "../../../PrimaryButton";
 
 import "./styles.scss";
 

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../../../../components/LoadedImage";
 
 import "./HomeProduct.scss";
 

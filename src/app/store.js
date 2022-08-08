@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import headerReducer from "components/Header/headerSlice";
-import cartReducer from "components/Cart/cartSlice";
-import wishlistReducer from "components/Wishlist/wishlistSlice";
-import shopReducer from "features/Shop/shopSlice";
-import detailReducer from "features/Detail/detailSlice";
+import headerReducer from "../components/Header/headerSlice";
+import cartReducer from "../components/Cart/cartSlice";
+import wishlistReducer from "../components/Wishlist/wishlistSlice";
+import shopReducer from "../features/Shop/shopSlice";
+import detailReducer from "../features/Detail/detailSlice";
 
 const rootReducer = {
   header: headerReducer,
@@ -14,8 +14,6 @@ const rootReducer = {
   wishlist: wishlistReducer,
 };
 
-const store = configureStore({
+export default configureStore({
   reducer: rootReducer,
 });
-
-export default store;

@@ -1,1 +1,1 @@
-changename
+npm install react-image-magnifiers firebase axios gsap json-server sass query-string react-hook-form react-lazy-load-image-component yup swiper npm i react-time-ago react-toastify redux react-paginate react-lazy-load-image-component @reduxjs/toolkit react-redux react-select @mui/material @emotion/react @emotion/styled

@@ -2,11 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 // material ui icons
-import LinearScaleIcon from "@material-ui/icons/LinearScale";
+import LinearScaleIcon from "@mui/icons-material/LinearScale";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../LoadedImage";
 
-import CommonBannerImg from "assets/images/Common/banner.jpg";
+import CommonBannerImg from "../../assets/images/Common/banner.jpg";
 
 import "./styles.scss";
 

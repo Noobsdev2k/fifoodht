@@ -1,19 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 
-import { homeAnalysisData } from "utils/staticData";
+import { homeAnalysisData } from "../../../../utils/staticData";
 
 // gsap
 import gsap from "gsap";
 
 // material ui core
-import { Container } from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import { AnalysisThumb } from "utils/homeImages";
+import { AnalysisThumb } from "../../../../utils/homeImages";
 
 import "./styles.scss";
+import { Container, Grid } from "@mui/material";
 
 function HomeAnalysis() {
   const [isShow, setIsShow] = useState(false);

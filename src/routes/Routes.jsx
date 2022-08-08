@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { Routes as Router, Route } from "react-router-dom";
 
-import routesConfig from "configs/routesConfig";
+import routesConfig from "../configs/routesConfig";
 
 import styled from "styled-components";
 
@@ -14,16 +14,16 @@ const Loading = styled.div`
 function Routes() {
   return (
     <Suspense fallback={<Loading>Loading ... 🍔🍔🍔</Loading>}>
-      <Switch>
-        {routesConfig.map(({ exact, path, component }, index) => (
+      <Router>
+        {routesConfig.map(({ exact, path, element }, index) => (
           <Route
             key={`route-${index}`}
             path={path}
-            component={component}
+            element={element}
             exact={exact}
           />
         ))}
-      </Switch>
+      </Router>
     </Suspense>
   );
 }

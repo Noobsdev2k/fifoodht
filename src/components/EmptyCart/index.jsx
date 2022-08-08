@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 
-import { PRIMARY_WHITE_COLOR } from "constants/colors";
-import { PHONE_BREAKPOINT, TABLET_BREAKPOINT } from "constants/breakpoints";
+import { PRIMARY_WHITE_COLOR } from "../../constants/colors";
+import {
+  PHONE_BREAKPOINT,
+  TABLET_BREAKPOINT,
+} from "../../constants/breakpoints";
 
-import LoadedImage from "components/LoadedImage";
+import LoadedImage from "../LoadedImage";
 
 // styled components
 import styled from "styled-components";

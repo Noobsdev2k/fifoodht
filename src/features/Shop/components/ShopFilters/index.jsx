@@ -1,18 +1,23 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
-import { ApiContext } from "contexts/ApiProvider";
-import { PrevFilterContext } from "contexts/PrevFilterProvider";
-
-import Checkbox from "components/Checkbox";
+import { ApiContext } from "../../../../contexts/ApiProvider";
+import { PrevFilterContext } from "../../../../contexts/PrevFilterProvider";
 
 // material ui icons
-import StarIcon from "@material-ui/icons/Star";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
-import { Bread, Burger, Drinks, Pizza, Sandwich } from "utils/shopSvgs";
+import {
+  Bread,
+  Burger,
+  Drinks,
+  Pizza,
+  Sandwich,
+} from "../../../../utils/shopSvgs";
 
 import "./styles.scss";
+import Checkbox from "../../../../components/Checkbox";
 
 const typeOptions = [
   {

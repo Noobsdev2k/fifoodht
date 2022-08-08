@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
 
-import usePrice from "hooks/usePrice";
+import usePrice from "../../../../hooks/usePrice";
 
-import PrimaryButton from "components/PrimaryButton";
-import EmptyCart from "components/EmptyCart";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import EmptyCart from "../../../../components/EmptyCart";
 
-import EmptyCartImg from "assets/svgs/Checkout/empty-cart.svg";
+import EmptyCartImg from "../../../../assets/svgs/Checkout/empty-cart.svg";
 
 import "./CheckoutAside.scss";
 

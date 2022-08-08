@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { useSelector } from "react-redux";
 
-import useFirestoreProducts from "hooks/useFirestoreProducts";
-import { AuthContext } from "contexts/AuthProvider";
+import useFirestoreProducts from "../../../../hooks/useFirestoreProducts";
+import { AuthContext } from "../../../../contexts/AuthProvider";
 
 import CartItem from "./CartItem";
 

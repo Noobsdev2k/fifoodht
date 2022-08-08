@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import shopApi from "api/shopApi";
-import { setDetailProducts } from "features/Detail/detailSlice";
+import shopApi from "../../../../api/shopApi";
+import { setDetailProducts } from "../../../../features/Detail/detailSlice";
 
-import ShopProduct from "components/ShopProduct";
-import Dialog from "components/Dialog";
+import ShopProduct from "../../../../components/ShopProduct";
+import Dialog from "../../../../components/Dialog";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
 
 function DetailProducts() {

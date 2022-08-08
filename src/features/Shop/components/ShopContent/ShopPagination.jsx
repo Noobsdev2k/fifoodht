@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { ApiContext } from "contexts/ApiProvider";
-import { PrevFilterContext } from "contexts/PrevFilterProvider";
-import shopApi from "api/shopApi";
+import { ApiContext } from "../../../../contexts/ApiProvider";
+import { PrevFilterContext } from "../../../../contexts/PrevFilterProvider";
+import shopApi from "../../../../api/shopApi";
 
 // react paginate
 import ReactPaginate from "react-paginate";
 
 // material ui icons
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import "./ShopPagination.scss";
 

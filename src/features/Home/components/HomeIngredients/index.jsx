@@ -1,16 +1,20 @@
 import { useEffect, useRef } from "react";
 
-import { homeIngredientsData } from "utils/staticData";
+import { homeIngredientsData } from "../../../../utils/staticData";
 
 // gsap
 import gsap from "gsap";
 
-import PrimaryButton from "components/PrimaryButton";
-import LoadedImage from "components/LoadedImage";
+import PrimaryButton from "../../../../components/PrimaryButton";
+import LoadedImage from "../../../../components/LoadedImage";
 
-import { IngredientsThumb, ShapeOne, ShapeTwo } from "utils/homeImages";
+import {
+  IngredientsThumb,
+  ShapeOne,
+  ShapeTwo,
+} from "../../../../utils/homeImages";
 
-import "assets/styles/_typography.scss";
+import "../../../../assets/styles/_typography.scss";
 import "./styles.scss";
 
 function HomeIngredients() {

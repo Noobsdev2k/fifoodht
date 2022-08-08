@@ -1,4 +1,4 @@
-import { db } from "configs/firebaseConfig";
+import { db } from "../configs/firebaseConfig";
 
 function useFirestoreProducts() {
   const query = db.collection("users");

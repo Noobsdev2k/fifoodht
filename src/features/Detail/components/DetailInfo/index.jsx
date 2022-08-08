@@ -2,8 +2,8 @@ import { useContext, useState, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import useFirestoreProducts from "hooks/useFirestoreProducts";
-import { AuthContext } from "contexts/AuthProvider";
+import useFirestoreProducts from "../../../../hooks/useFirestoreProducts";
+import { AuthContext } from "../../../../contexts/AuthProvider";
 
 import DetailContent from "./DetailContent";
 

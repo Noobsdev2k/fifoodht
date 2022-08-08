@@ -1,20 +1,20 @@
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
 
-import { setShopProducts } from "features/Shop/shopSlice";
-import shopApi from "api/shopApi";
+import { setShopProducts } from "../../../../features/Shop/shopSlice";
+import shopApi from "../../../../api/shopApi";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
 // material ui icons
-import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
-import { setIsAtCheckout } from "components/Header/headerSlice";
+import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlined";
+import { setIsAtCheckout } from "../../../../components/Header/headerSlice";
 
 import "./styles.scss";
+import { Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function CheckoutSuccess() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ function CheckoutSuccess() {
     };
 
     dispatch(checkoutAction);
-    history.push("/shop/our-foods?_limit=16");
+    navigate("/shop/our-foods?_limit=16");
     getProducts("our-foods", { _limit: 16 });
   };
 

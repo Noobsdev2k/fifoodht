@@ -6,18 +6,18 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 // material ui icons
-import DoneOutlinedIcon from "@material-ui/icons/DoneOutlined";
-import LoyaltyOutlinedIcon from "@material-ui/icons/LoyaltyOutlined";
-import PriorityHighOutlinedIcon from "@material-ui/icons/PriorityHighOutlined";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import SettingsIcon from "@material-ui/icons/Settings";
+import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
+import LoyaltyOutlinedIcon from "@mui/icons-material/LoyaltyOutlined";
+import PriorityHighOutlinedIcon from "@mui/icons-material/PriorityHighOutlined";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 import {
   SUCCESS_COLOR,
   FAVOURITE_COLOR,
   WARNING_COLOR,
   CLOSED_COLOR,
-} from "constants/colors";
+} from "../../constants/colors";
 
 import "./styles.scss";
 

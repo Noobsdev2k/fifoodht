@@ -1,23 +1,22 @@
 import { useEffect, useRef } from "react";
 
-import { homeReviewsData } from "utils/staticData";
+import { homeReviewsData } from "../../../../utils/staticData";
 
 // gsap
 import gsap from "gsap";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
 // swiper js
 import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // swiper scss
-import "swiper/swiper.scss";
-import "swiper/components/pagination/pagination.scss";
+import "swiper/scss";
+import "swiper/scss/pagination";
 
-import BackgroundIcon from "components/BackgroundIcon";
-import LoadedImage from "components/LoadedImage";
+import BackgroundIcon from "../../../../components/BackgroundIcon";
+import LoadedImage from "../../../../components/LoadedImage";
 
 import {
   BackgroundIconFour,
@@ -25,9 +24,10 @@ import {
   BackgroundIconSix,
   BackgroundIconSeven,
   BackgroundIconEight,
-} from "utils/backgroundIcons";
+} from "../../../../utils/backgroundIcons";
 
 import "./styles.scss";
+import { Container } from "@mui/material";
 
 // swiper modules
 SwiperCore.use([Autoplay, Pagination]);

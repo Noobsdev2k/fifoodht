@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState, createContext } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import shopApi from "api/shopApi";
-import { setShopProducts } from "features/Shop/shopSlice";
+import shopApi from "../api/shopApi";
+import { setShopProducts } from "../features/Shop/shopSlice";
 import { PrevFilterContext } from "./PrevFilterProvider";
-import { PHONE_BREAKPOINT } from "constants/breakpoints";
+import { PHONE_BREAKPOINT } from "../constants/breakpoints";
 
 // query string
 import queryString from "query-string";
@@ -20,7 +20,7 @@ const ApiProvider = ({ children }) => {
 
   const dispatch = useDispatch();
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { handlePrevious } = useContext(PrevFilterContext);
 
@@ -88,8 +88,8 @@ const ApiProvider = ({ children }) => {
         ? setPaginationActive(Number(currentPagination) - 1)
         : setPaginationActive(0);
 
-      history.push({
-        pathname: type,
+      navigate({
+        pathname: `/shop/${type}`,
         search: queryString.stringify(
           isAtPhone
             ? {

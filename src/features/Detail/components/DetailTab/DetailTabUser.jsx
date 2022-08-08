@@ -1,19 +1,19 @@
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { AuthContext } from "contexts/AuthProvider";
-import useFirestoreComments from "hooks/useFirestoreComments";
+import { AuthContext } from "../../../../contexts/AuthProvider";
+import useFirestoreComments from "../../../../hooks/useFirestoreComments";
 
 // material ui core
-import { Avatar } from "@material-ui/core";
 
 // material ui icons
-import StarIcon from "@material-ui/icons/Star";
+import StarIcon from "@mui/icons-material/Star";
 
-import PrimaryButton from "components/PrimaryButton";
+import PrimaryButton from "../../../../components/PrimaryButton";
 
 import "./DetailTabUser.scss";
-import Dialog from "components/Dialog";
+import Dialog from "../../../../components/Dialog";
+import { Avatar } from "@mui/material";
 
 function DetailTabUser({ colors, commentRef }) {
   const [areaValue, setAreaValue] = useState("");

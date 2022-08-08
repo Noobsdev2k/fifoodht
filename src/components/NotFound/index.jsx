@@ -1,22 +1,22 @@
 import { useContext, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { setIsAtCheckout } from "components/Header/headerSlice";
+import { AuthContext } from "../../contexts/AuthProvider";
+import { setIsAtCheckout } from "../Header/headerSlice";
 
 // material ui icons
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 // material ui core
-import { Container } from "@material-ui/core";
 
-import NotFoundImg from "assets/svgs/NotFound/404.svg";
+import NotFoundImg from "../../assets/svgs/NotFound/404.svg";
 
 import "./styles.scss";
+import { useNavigate } from "react-router-dom";
+import { Container } from "@mui/material";
 
 function NotFound() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function NotFound() {
     const action = setIsAtCheckout(false);
 
     dispatch(action);
-    history.push("/home");
+    navigate("/home");
   };
 
   return (

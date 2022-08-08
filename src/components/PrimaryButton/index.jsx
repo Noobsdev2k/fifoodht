@@ -1,23 +1,23 @@
 import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import { ApiContext } from "contexts/ApiProvider";
-import { setIsAtCheckout, setIsShowCart } from "components/Header/headerSlice";
-import { setIsShowWishlist } from "components/Wishlist/wishlistSlice";
+import { ApiContext } from "../../contexts/ApiProvider";
+import { setIsAtCheckout, setIsShowCart } from "../Header/headerSlice";
+import { setIsShowWishlist } from "../Wishlist/wishlistSlice";
 
 // material ui core
-import { Button } from "@material-ui/core";
 
 import "./styles.scss";
+import { Button } from "@mui/material";
 
 function PrimaryButton(props) {
   const { page, subClass, children } = props;
 
   const dispatch = useDispatch();
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { getProducts } = useContext(ApiContext);
 
@@ -31,18 +31,18 @@ function PrimaryButton(props) {
     if (page === "shop") {
       const action = setIsAtCheckout(false);
 
-      history.push("/shop/best-foods");
+      navigate("/shop/best-foods");
       getProducts("best-foods");
       dispatch(action);
     } else if (page === "checkout") {
       const action = setIsAtCheckout(true);
 
-      history.push("/checkout");
+      navigate("/checkout");
       dispatch(action);
     } else if (page === "login") {
       const action = setIsAtCheckout(false);
 
-      history.push("/login");
+      navigate("/login");
       dispatch(action);
     }
   };

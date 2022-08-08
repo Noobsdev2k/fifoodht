@@ -1,13 +1,12 @@
 import { useContext } from "react";
 
-import { AuthContext } from "contexts/AuthProvider";
-import { auth } from "configs/firebaseConfig";
+import { AuthContext } from "../../../../contexts/AuthProvider";
+import { auth } from "../../../../configs/firebaseConfig";
 
 // material ui core
-import { Avatar, FormControlLabel } from "@material-ui/core";
-import Checkbox from "@material-ui/core/Checkbox";
 
 import "./CheckoutUserInfo.scss";
+import { Avatar, Checkbox, FormControlLabel } from "@mui/material";
 
 function CheckoutInfo() {
   const { user, setUser } = useContext(AuthContext);

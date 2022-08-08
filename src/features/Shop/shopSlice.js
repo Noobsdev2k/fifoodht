@@ -1,4 +1,4 @@
-import { SHOP_PRODUCTS_VIEW } from "constants/localStorage";
+import { SHOP_PRODUCTS_VIEW } from "../../constants/localStorage";
 
 import { createSlice } from "@reduxjs/toolkit";
 

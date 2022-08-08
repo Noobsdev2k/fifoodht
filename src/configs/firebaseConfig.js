@@ -4,13 +4,13 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDrL8c63Ab5Id73IeKCLyNL6sQSmdnSOQE",
-  authDomain: "food-f-base.firebaseapp.com",
-  projectId: "food-f-base",
-  storageBucket: "food-f-base.appspot.com",
-  messagingSenderId: "283069086641",
-  appId: "1:283069086641:web:68561d4704164c3a35db90",
-  measurementId: "G-MZC8S5ZF06"
+  apiKey: "AIzaSyB4tLAQAnuak7UYBq0IDnpt9ZobPrWAuyg",
+  authDomain: "food-f-base-a9142.firebaseapp.com",
+  projectId: "food-f-base-a9142",
+  storageBucket: "food-f-base-a9142.appspot.com",
+  messagingSenderId: "601998816204",
+  appId: "1:601998816204:web:fbbedf9e7f94d6837b2369",
+  measurementId: "G-G7CFBT3YGR"
 };
 
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();

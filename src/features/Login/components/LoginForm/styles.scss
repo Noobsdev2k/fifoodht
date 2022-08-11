@@ -1,5 +1,5 @@
-@import "../../../../assets/styles/colors";
-@import "../../../../assets/styles/mixins";
+@import "assets/styles/colors";
+@import "assets/styles/mixins";
 
 .form-login {
   margin-bottom: 15px;
@@ -29,6 +29,5 @@
 
   &__btn .primary-btn {
     min-width: 39.5rem;
-
   }
 }

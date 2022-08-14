@@ -76,9 +76,11 @@ function LoginForm() {
         <span className="form-login__commit-msg">Save your password</span>
       </div>
 
-      <button type="submit" className="form-login__btn">
-        <PrimaryButton subClass="red">Log in</PrimaryButton>
-      </button>
+      <div className="form-login__btn">
+        <PrimaryButton subClass="red form-login__btn" type="submit">
+          Log in
+        </PrimaryButton>
+      </div>
     </form>
   );
 }

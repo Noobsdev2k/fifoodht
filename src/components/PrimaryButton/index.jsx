@@ -13,7 +13,7 @@ import "./styles.scss";
 import { Button } from "@mui/material";
 
 function PrimaryButton(props) {
-  const { page, subClass, children } = props;
+  const { page, subClass, children, type } = props;
 
   const dispatch = useDispatch();
 
@@ -50,6 +50,7 @@ function PrimaryButton(props) {
   return (
     <Button
       onClick={handleMovePage}
+      type={type ? "submit" : "button"}
       className={`primary-btn ${subClass || ""}`}
     >
       {children}
@@ -58,6 +59,7 @@ function PrimaryButton(props) {
 }
 
 PrimaryButton.propsTypes = {
+  type: PropTypes.string,
   page: PropTypes.string,
   subClass: PropTypes.string,
 };

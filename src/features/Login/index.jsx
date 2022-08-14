@@ -31,7 +31,7 @@ function Login() {
     auth
       .signInWithPopup(googleProvider)
       .then(() => {
-        navigate(-1);
+        navigate("/home");
         setHasHeader(true);
       })
       .catch((error) => {
@@ -43,7 +43,7 @@ function Login() {
     auth
       .signInWithPopup(facebookProvider)
       .then(() => {
-        navigate(-1);
+        navigate("/home");
         setHasHeader(true);
       })
       .catch((error) => {

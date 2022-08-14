@@ -43,9 +43,7 @@ const routesConfig = [
     path: PATH_NAMES.LOGIN,
     element: <Login />,
   },
-  {
-    element: <NotFound />,
-  },
+  { exact: true, path: PATH_NAMES.NotFound, element: <NotFound /> },
 ];
 
 export default routesConfig;

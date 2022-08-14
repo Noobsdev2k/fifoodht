@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthProvider";
 import { auth } from "../../configs/firebaseConfig";
@@ -129,20 +129,28 @@ function Header() {
             <div className="navbar--left">
               <ul className="navbar__list">
                 <li className="navbar__item">
-                  <HomeIcon />
-                  Pages
+                  <Link to="/home" className="navbar__link">
+                    <HomeIcon />
+                    Home
+                  </Link>
                 </li>
                 <li className="navbar__item">
-                  <RestaurantMenuIcon />
-                  Order online
+                  <Link to="/shop/best-foods" className="navbar__link">
+                    <RestaurantMenuIcon />
+                    Order online
+                  </Link>
                 </li>
                 <li className="navbar__item">
-                  <LibraryBooksIcon />
-                  News
+                  <Link to="/news" className="navbar__link">
+                    <LibraryBooksIcon />
+                    News
+                  </Link>
                 </li>
                 <li className="navbar__item">
-                  <StoreMallDirectoryIcon />
-                  Store locations
+                  <Link to="/location" className="navbar__link">
+                    <StoreMallDirectoryIcon />
+                    Store locations
+                  </Link>
                 </li>
               </ul>
             </div>

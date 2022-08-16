@@ -28,6 +28,7 @@ import Wishlist from "../Wishlist";
 import Logo from "../../assets/svgs/Common/logo.svg";
 import "./styles.scss";
 import { Avatar, Container } from "@mui/material";
+import { ApiContext } from "contexts/ApiProvider";
 
 function Header() {
   const [isStickyTop, setIsStickyTop] = useState(false);
@@ -92,6 +93,8 @@ function Header() {
 
     return window.addEventListener("scroll", scrollShowNav);
   }, []);
+  //loading products api call
+  const { getProducts } = useContext(ApiContext);
 
   // handle products quanity
   useEffect(() => {
@@ -135,7 +138,11 @@ function Header() {
                   </Link>
                 </li>
                 <li className="navbar__item">
-                  <Link to="/shop/best-foods" className="navbar__link">
+                  <Link
+                    to="/shop/best-foods"
+                    className="navbar__link"
+                    onClick={() => getProducts("best-foods")}
+                  >
                     <RestaurantMenuIcon />
                     Order online
                   </Link>

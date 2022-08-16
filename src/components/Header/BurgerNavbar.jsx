@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -14,6 +14,8 @@ import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
 
 import "./BurgerNavbar.scss";
+import { Link } from "react-router-dom";
+import { ApiContext } from "contexts/ApiProvider";
 
 function BurgerNavbar(props) {
   const { user, isShow, showBurgerNav, handleLogOut, handleLogIn } = props;
@@ -32,6 +34,8 @@ function BurgerNavbar(props) {
       showBurgerNav();
     }
   };
+  //loading products api call
+  const { setProducts } = useContext(ApiContext);
 
   return (
     <div className="burger-nav">
@@ -56,17 +60,28 @@ function BurgerNavbar(props) {
 
         <ul className="burger-nav__list">
           <li className="burger-nav__item">
-            <HomeIcon />
-            Pages
+            <Link to="/" className="burger-nav__link">
+              <HomeIcon /> Home
+            </Link>
           </li>
           <li className="burger-nav__item">
-            <RestaurantMenuIcon /> Order online
+            <Link
+              to="/shop/best-foods"
+              className="burger-nav__link"
+              onClick={() => setProducts("best-foods")}
+            >
+              <RestaurantMenuIcon /> Order online
+            </Link>
           </li>
           <li className="burger-nav__item">
-            <LibraryBooksIcon /> News
+            <Link to="/news" className="burger-nav__link">
+              <LibraryBooksIcon /> News
+            </Link>
           </li>
           <li className="burger-nav__item">
-            <StoreMallDirectoryIcon /> Store locations
+            <Link to="/location" className="burger-nav__link">
+              <StoreMallDirectoryIcon /> Store locations
+            </Link>
           </li>
         </ul>
 
